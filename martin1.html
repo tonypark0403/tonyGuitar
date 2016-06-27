@@ -1,0 +1,143 @@
+﻿<div id="product" class="default_wrap">
+	<ul id="product_list">
+		<li>
+			<a href="#img1"><img src="images/martin/00028ec.JPG" alt="00028ec"></a>
+			<article id="img1">
+				<figure>
+					<a href="#img2"><img src="images/martin/00028ec1.jpg" alt="Matauri Bay"></a>
+					<figcaption>00028ec</figcaption>
+					<div class="detail">
+						<?php
+							$lines = array("db-mysql.zenit", "int322_162b14", "jhMZ5397", "int322_162b14");
+							$dbserver = trim($lines[0]);
+							$uid = trim($lines[1]);
+							$pw = trim($lines[2]);
+							$dbname = trim($lines[3]);
+							$conn = new mysqli($dbserver, $uid, $pw, $dbname);
+
+							if ($conn->connect_error) {
+								die("Connection failed: " . $conn->connect_error);
+							}
+							
+							$sql = "SELECT title, fname, lname, org, email, phone, workday, size FROM lab3";
+							$result = $conn->query($sql);
+						
+							if ($result->num_rows > 0) {
+								echo "<table><tr>";
+								echo "<td>ProductName</td>";
+								echo "<td>".$row["title"]."</td>";
+								echo "</tr><tr>";
+								echo "<td>Company</td>";
+								echo "<td>".$row["fname"]."</td>";
+								echo "</tr><tr>";
+								echo "<td>Price</td>";
+								echo "<td>".$row["lname"]."</td>";
+								echo "</tr><tr>";
+								echo "<td>Feature</td>";
+								echo "<td>".$row["org"]."</td>";
+								echo "</tr></table>";
+							} else {
+								echo "0 results";
+							}
+							$conn->close();
+						?>
+					</div>
+				</figure>
+				<nav>
+					 <a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+
+		<li>
+			<a href="#img2"><img src="images/martin/d28.JPG" alt="d28"></a>
+			<article id="img2">
+				<figure>
+					<a href="#img3"><img src="images/2.jpg" alt="Haruru Falls"></a>
+					<figcaption>d28</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+
+		<li>
+			<a href="#img3"><img src="images/martin/d35.JPG" alt="d35"></a>
+			<article id="img3">
+				<figure>
+					<a href="#img4"><img src="images/3.jpg" alt="Cape Reigna View, West"></a>
+					<figcaption>d35</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+		<li>
+			<a href="#img4"><img src="images/martin/d35e.JPG" alt="d35e"></a>
+			<article id="img4">
+				<figure>
+					<a href="#img5"><img src="images/4.jpg" alt="Cape Reigna View, South"></a>
+					<figcaption>d35e</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+		<li>
+			<a href="#img5"><img src="images/martin/d41.JPG" alt="d41"></a>
+			<article id="img5">
+				<figure>
+					<a href="#img6"><img src="images/5.jpg" alt="Cape Reigna View, East"></a>
+					<figcaption>d41</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+		<li>
+			<a href="#img6"><img src="images/martin/d45v.JPG" alt="d45v"></a>
+			<article id="img6">
+				<figure>
+					<a href="#img7"><img src="images/6.jpg" alt="The Tasman Sea meets the Pacific Ocean, Cape Reigna"></a>
+					<figcaption>d45v</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+		<li>
+			<a href="#img7"><img src="images/martin/dJunior.JPG" alt="D-Junior"></a>
+			<article id="img7">
+				<figure>
+					<a href="#img8"><img src="images/7.jpg" alt="The Lighthouse, Cape Reigna"></a>
+					<figcaption>D-Junior</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+		<li>
+			<a href="#img8"><img src="images/martin/gpcpa4.JPG" alt="gpcpa4"></a>
+			<article id="img8">
+				<figure>
+					<a href="#img9"><img src="images/8.jpg" alt="The Ninety Mile Beach"></a>
+					<figcaption>gpcpa4</figcaption>
+				</figure>
+				<nav>
+					<a class="close" href="#close">Close</a>
+				</nav>
+			</article>
+		</li>
+	</ul>
+	<br />
+	<div id="page">
+		<a id="mp1" href="#">1</a>
+		<a id="mp2" href="#">2</a>
+	</div>
+</div>
